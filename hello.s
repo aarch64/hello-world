@@ -1,7 +1,7 @@
 .text 			// code section
 .globl _start
 _start:
-	mov x0, 0 	// stdout has file descriptor 0
+	mov x0, 1 	// stdout has file descriptor 1
 	ldr x1, =msg 	// buffer to write
 	mov x2, msg_len	// size of buffer
 	mov x8, 64 	// sys_write() is at index 64 in kernel functions table
